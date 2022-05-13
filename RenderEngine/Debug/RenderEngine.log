@@ -1,18 +1,20 @@
 ﻿  main.cpp
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(187,36): warning C4244: '-=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(188,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(189,36): warning C4244: '-=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(190,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(192,36): warning C4244: '+=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(193,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(194,36): warning C4244: '+=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(195,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(197,36): warning C4244: '+=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(198,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(199,36): warning C4244: '+=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(200,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(202,36): warning C4244: '-=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(203,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(204,36): warning C4244: '-=': conversion from 'double' to 'LONG', possible loss of data
-C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(205,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
-  RenderEngine.vcxproj -> C:\Users\emil.andersson20\Documents\GitHub\Rendering3D\RenderEngine\Debug\RenderEngine.exe
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(142,41): warning C4244: 'argument': conversion from 'double' to 'UINT', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(177,53): warning C4244: 'argument': conversion from 'double' to 'UINT', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(187,36): warning C4244: '-=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(188,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(189,36): warning C4244: '-=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(190,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(192,36): warning C4244: '+=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(193,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(194,36): warning C4244: '+=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(195,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(197,36): warning C4244: '+=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(198,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(199,36): warning C4244: '+=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(200,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(202,36): warning C4244: '-=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(203,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(204,36): warning C4244: '-=': conversion from 'double' to 'LONG', possible loss of data
+C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\main.cpp(205,34): warning C4244: '=': conversion from 'double' to 'LONG', possible loss of data
+  RenderEngine.vcxproj -> C:\Users\emili\Documents\GitHub\Rendering3D\RenderEngine\Debug\RenderEngine.exe

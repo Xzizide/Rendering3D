@@ -117,9 +117,10 @@ bool LoadAndBlitBitmap(LPCWSTR szFileName, HDC hWinDC, HWND hwnd)
 
 RECT rcCurrent = { 0,0,20,20 };
 int idTimer = -1;
-double speed = 15;
+double speed = 1;
+double fps = 0.1;
 BOOL fVisible = FALSE;
-POINT poArr[11] = {1,-250 /*E*/ , 1,250 /*A*/, -200,150 /*B*/, 1,-250 /*E*/, 1,50 /*C*/, -200,150 /*B*/, 200,150 /*D*/, 1,250 /*A*/, 1,50 /*C*/, 200,150 /*D*/, 1,-250 /*E*/ };
+POINT poArr[11] = {0,-250 /*E*/ , 0,250 /*A*/, -200,150 /*B*/, 0,-250 /*E*/, 0,50 /*C*/, -200,150 /*B*/, 200,150 /*D*/, 0,250 /*A*/, 0,50 /*C*/, 200,150 /*D*/, 0,-250 /*E*/ };
 HDC hdc;
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -139,7 +140,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                 rcCurrent.top, NULL);
             SetROP2(hdc, R2_NOT);
 
-            SetTimer(hwnd, idTimer = 1, 100, NULL);
+            SetTimer(hwnd, idTimer = 1, fps, NULL);
             return 0L;
 
         case WM_DESTROY:
@@ -174,7 +175,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                 case SIZE_MAXIMIZED:
 
                     if (idTimer == -1)
-                        SetTimer(hwnd, idTimer = 1, 10, NULL);
+                        SetTimer(hwnd, idTimer = 1, fps, NULL);
                     break;
             }
             return 0L;
