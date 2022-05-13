@@ -4,6 +4,7 @@
 
 #include <windows.h>
 #include <iostream>
+#include <cmath>
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
@@ -116,6 +117,7 @@ bool LoadAndBlitBitmap(LPCWSTR szFileName, HDC hWinDC, HWND hwnd)
 
 RECT rcCurrent = { 0,0,20,20 };
 int idTimer = -1;
+double speed = 15;
 BOOL fVisible = FALSE;
 POINT poArr[11] = {1,-250 /*E*/ , 1,250 /*A*/, -200,150 /*B*/, 1,-250 /*E*/, 1,50 /*C*/, -200,150 /*B*/, 200,150 /*D*/, 1,250 /*A*/, 1,50 /*C*/, 200,150 /*D*/, 1,-250 /*E*/ };
 HDC hdc;
@@ -137,7 +139,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                 rcCurrent.top, NULL);
             SetROP2(hdc, R2_NOT);
 
-            SetTimer(hwnd, idTimer = 1, 10, NULL);
+            SetTimer(hwnd, idTimer = 1, 100, NULL);
             return 0L;
 
         case WM_DESTROY:
@@ -178,43 +180,47 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
             return 0L;
 
         case WM_TIMER:
-            if (poArr[1].x != -100) {
-                poArr[1].x = -100;
-                poArr[1].y = 225;
-                poArr[7].x = -100;
-                poArr[7].y = 225;
-            /*B*/
-                poArr[2].x = -100;
-                poArr[2].y = 62;
-                poArr[5].x = -100;
-                poArr[5].y = 62;
-            /*C*/
-                poArr[4].x = 100;
-                poArr[4].y = 62;
-                poArr[8].x = 100;
-                poArr[8].x = 62;
-            /*D*/
-                poArr[6].x = 100;
-                poArr[6].y = 225;
-                poArr[9].x = 100;
-                poArr[9].y = 225;
+            if (poArr[1].x <= 1 && poArr[1].x - speed > -200 && poArr[1].y <= 250 && poArr[1].y > 150) {
+                double pqAC = sqrt(pow(150,2) - (0.25 * pow(poArr[1].x - speed, 2) + 12500));
+                double pqBD = sqrt(pow(150, 2) - (0.25 * pow(poArr[2].x + speed, 2) + 12500));
+                //A
+                poArr[1].x -= speed;
+                poArr[1].y = 150 + pqAC;
+                poArr[7].x -= speed;
+                poArr[7].y = 150 + pqAC;
+                //B
+                poArr[2].x += speed;
+                poArr[2].y = 150 - pqBD;
+                poArr[5].x += speed;
+                poArr[5].y = 150 - pqBD;
+                //C
+                poArr[4].x += speed;
+                poArr[4].y = 150 - pqAC;
+                poArr[8].x += speed;
+                poArr[8].y = 150 - pqAC;
+                //D
+                poArr[6].x -= speed;
+                poArr[6].y = 150 + pqBD;
+                poArr[9].x -= speed;
+                poArr[9].y = 150 + pqBD;
             }
             else {
+                //A
                 poArr[1].x = 1;
                 poArr[1].y = 250;
                 poArr[7].x = 1;
                 poArr[7].y = 250;
-                /*B*/
+                //B
                 poArr[2].x = -200;
                 poArr[2].y = 150;
                 poArr[5].x = -200;
                 poArr[5].y = 150;
-                /*C*/
+                //C
                 poArr[4].x = 1;
                 poArr[4].y = 50;
                 poArr[8].x = 1;
-                poArr[8].x = 50;
-                /*D*/
+                poArr[8].y = 50;
+                //D
                 poArr[6].x = 200;
                 poArr[6].y = 150;
                 poArr[9].x = 200;
